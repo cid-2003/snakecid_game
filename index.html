@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>snake_game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="game-details">
+            <span class="score">Score: 0</span>
+            <span class="high-score">Score Elevé: 50</span>
+        </div>
+
+        <div class="play-board"></div>
+        <div class="controls">
+            <img data-key="ArrowLeft" src="svg/circle-left.svg" alt="">
+            <img data-key="ArrowUp" src="svg/circle-up.svg" alt="">
+            <img data-key="ArrowRight" src="svg/circle-right.svg" alt="">
+            <img data-key="ArrowDown" src="svg/circle-down.svg" alt="">
+        </div>
+
+        <div id="game-over-modal" class="modal">
+            <div class="modal-content">
+              <h2>Perdu 🤣!</h2>
+              <p>Appuyez sur OK pour rejouer.</p>
+              <button id="replay-button">OK</button>
+            </div>
+          </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

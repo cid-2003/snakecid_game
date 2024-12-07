@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    /* background: #2C3E50; */
+    background: #34495E;
+}
+
+.wrapper {
+    width: 65vmin;
+    height: 70vmin;
+    background: #2C3E50;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.game-details {
+    color: #000000;
+    font-size: 1.2rem;
+    font-weight: 800;
+    padding: 20px 27px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.play-board {
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    display: grid;
+    grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+}
+
+
+.play-board .food {
+    background: red;
+}
+
+.play-board .head {
+    background: #FFFFFF;
+}
+
+.controls {
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    /* gap: 10px;
+    margin-top: 15px; */
+}
+
+.controls img {
+    border-radius: 100%;
+    padding: 25px 0;
+    width: calc(30% / 4);
+    text-align: center;
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h2 {
+    margin: 0 0 10px;
+}
+
+#replay-button {
+    background-color: #fe0000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#replay-button:hover {
+    background-color: #bf0000;
+}
+
+@media screen and (max-width: 800px) {
+    .wrapper {
+        width: 90vmin;
+        height: 115vmin;
+    }
+
+    .game-details {
+        font-size: 1rem;
+        padding: 15px 27px;
+    }
+
+    .controls {
+        display: flex;
+    }
+
+    .controls img {
+        padding: 15px 0;
+        font-size: 1.5rem;
+    }
+
+    .modal-content {
+        width: 100%;
+        padding: 30px;
+        font-size: 1.9rem;
+        max-width: 600px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        line-height: 1.5;
+    }
+
+    .modal-content h2 {
+        font-size: 2rem;
+    }
+
+    .modal-content p {
+        font-size: 1.5rem;
+    }
+
+    #replay-button {
+        padding: 15px 20px;
+        font-size: 20px;
+        border: none;
+        padding: 10px 20px;
+        font-size: 2rem;
+        border-radius: 5px;
+        margin-top: 20px;
+        transition: background-color 0.3s ease;
+    }
+    #modal {
+        display: none; 
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%; 
+        height: 100%;
+        overflow: hidden; 
+        background-color: rgba(0, 0, 0, 0.7); 
+        display: flex; 
+        align-items: center;
+        justify-content: center; 
+    }
+
+}
